@@ -16,18 +16,17 @@ chrome_option = webdriver.ChromeOptions()
 chrome_option.add_experimental_option("detach", True)
 
 driver = webdriver.Chrome(chrome_option)
-driver.get("https://www.linkedin.com/jobs/search/?currentJobId=3967126474&f_AL=true&keywords=python%20developer"
-           "&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true")
+driver.get("add-linkedln-link-here.com")
 
 driver.implicitly_wait(5)
 sign_up = driver.find_element(By.CLASS_NAME, "nav__button-secondary")
 sign_up.click()
 driver.implicitly_wait(2)
 username = driver.find_element(By.ID, "username")
-username.send_keys("mr.cool.100daysofcode@gmail.com", Keys.ENTER)
+username.send_keys("addyouremail@xyz.com", Keys.ENTER)
 driver.implicitly_wait(2)
 password = driver.find_element(By.ID, "password")
-password.send_keys("Rashu@123", Keys.ENTER)
+password.send_keys("mail-password", Keys.ENTER)
 
 list_applications = driver.find_elements(By.CSS_SELECTOR, ".jobs-search-results-list ul li")
 
